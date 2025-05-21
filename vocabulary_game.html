@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulary Matching Game - LearnHub</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="games.html">Games</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Vocabulary Matching Game</h1>
+  
+  <div id="game-info">
+    <p>Score: <span id="score">0</span></p>
+    <p id="feedback-message"></p>
+  </div>
+  
+  <div id="game-area" class="game-area">
+    <div id="words-column" class="words-column">
+      <h2>Words</h2>
+      <ul id="word-list">
+        <!-- Words will be populated by JavaScript -->
+      </ul>
+    </div>
+    <div id="definitions-column" class="definitions-column">
+      <h2>Definitions / Images</h2>
+      <ul id="definition-list">
+        <!-- Definitions/images will be populated by JavaScript -->
+      </ul>
+    </div>
+  </div>
+  
+  <button id="reset-game-btn">Start New Game</button>
+</main>
+
+<footer>
+  <p>© 2023 LearnHub</p>
+</footer>
+
+<script src="js/vocabulary_game.js"></script>
+</body>
+</html>

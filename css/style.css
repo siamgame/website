@@ -211,3 +211,257 @@ form button[type="submit"]:hover {
     line-height: 150px; /* Adjust if needed */
   }
 }
+
+/* Vocabulary Matching Game Styles */
+.game-area {
+    display: flex;
+    justify-content: space-around; /* Puts space between word and definition columns */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.words-column, .definitions-column {
+    width: 45%; /* Each column takes up almost half the space */
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.words-column h2, .definitions-column h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#word-list li, #definition-list li {
+    background-color: #e7f3fe;
+    border: 1px solid #cce0f5;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    cursor: grab; /* Indicates draggable items */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#word-list li:hover, #definition-list li:hover {
+    background-color: #d0e7fd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Class to apply when an item is being dragged */
+.dragging {
+    opacity: 0.5;
+    border: 2px dashed #007bff;
+}
+
+/* Style for the drop targets (definitions) */
+#definition-list li.drag-over {
+    background-color: #c3e6cb; /* Greenish tint when dragging over a potential target */
+    border-color: #8fd19e;
+}
+
+#game-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-info p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+#feedback-message {
+    font-weight: bold;
+    min-height: 20px; /* Reserve space for the message */
+}
+
+#feedback-message.correct {
+    color: green;
+}
+
+#feedback-message.incorrect {
+    color: red;
+}
+
+#reset-game-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-game-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments for the game */
+@media (max-width: 768px) {
+    .game-area {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center;
+    }
+
+    .words-column, .definitions-column {
+        width: 90%; /* Columns take more width when stacked */
+        margin-bottom: 15px;
+    }
+}
+
+/* Fast-Paced Quiz Game Styles */
+#game-status-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+#game-status-area p {
+    font-size: 1.1em;
+    margin: 0;
+    color: #333;
+}
+
+#time-left {
+    font-weight: bold;
+    color: #d9534f; /* Red color for timer */
+}
+
+#current-score {
+    font-weight: bold;
+    color: #5cb85c; /* Green color for score */
+}
+
+#question-area {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#question-text {
+    font-size: 1.3em;
+    text-align: center;
+    color: #212529;
+    margin: 0;
+}
+
+.answer-choices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two choices per row */
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px;
+}
+
+.answer-choices button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.answer-choices button:hover {
+    background-color: #0056b3;
+}
+
+.answer-choices button:active {
+    transform: scale(0.98);
+}
+
+.answer-choices button.correct {
+    background-color: #28a745 !important; /* Green for correct */
+}
+
+.answer-choices button.incorrect {
+    background-color: #dc3545 !important; /* Red for incorrect */
+}
+
+/* Disabled state for buttons after an answer or when quiz not active */
+.answer-choices button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#feedback-text {
+    text-align: center;
+    font-size: 1.1em;
+    min-height: 24px; /* Reserve space */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#feedback-text.correct {
+    color: green;
+}
+
+#feedback-text.incorrect {
+    color: red;
+}
+
+#start-quiz-btn, #play-again-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-quiz-btn:hover, #play-again-btn:hover {
+    background-color: #4cae4c;
+}
+
+#final-results-area {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#final-results-area h2 {
+    color: #007bff;
+}
+
+/* Responsive adjustments for the fast quiz game */
+@media (max-width: 600px) {
+    .answer-choices {
+        grid-template-columns: 1fr; /* Stack choices vertically on smaller screens */
+    }
+
+    #game-status-area {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #game-status-area p {
+        margin-bottom: 5px;
+    }
+}
