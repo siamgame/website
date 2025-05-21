@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="games.html">Games</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+  </nav>
+</header>
+
+<div class="container">
+  <main>
+    <h1>Register</h1>
+    <form id="register-form">
+      <div>
+        <label for="register-username">Username:</label>
+        <input type="text" id="register-username" placeholder="Username" required>
+      </div>
+      <div>
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" placeholder="Email" required>
+      </div>
+      <div>
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" placeholder="Password" required>
+      </div>
+      <div>
+        <label for="register-confirm-password">Confirm Password:</label>
+        <input type="password" id="register-confirm-password" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </main>
+</div>
+
+<footer>
+  <p>© 2023 LearnHub</p>
+</footer>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
